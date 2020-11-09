@@ -6,6 +6,7 @@ import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,8 +16,14 @@ import java.util.ArrayList;
 
 public class DataActivityAdapter extends  RecyclerView.Adapter<DataActivityAdapter.ViewHolder>  {
 
+    private ArrayList<ComplainModel> mComplains;
+
+    public DataActivityAdapter(ArrayList<ComplainModel> complains){
+        mComplains = complains;
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView status;
+        public RadioButton rbSolved;
         public TextView name;
         public TextView fatherName;
         public TextView District;
@@ -26,18 +33,20 @@ public class DataActivityAdapter extends  RecyclerView.Adapter<DataActivityAdapt
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            status = (TextView)itemView.findViewById(R.id.status);
+            rbSolved = (RadioButton) itemView.findViewById(R.id.rbSolved);
             name = (TextView)itemView.findViewById(R.id.name);
             fatherName = (TextView)itemView.findViewById(R.id.fName);
             District = (TextView)itemView.findViewById(R.id.district);
             Type = (TextView)itemView.findViewById(R.id.type);
             Description = (TextView)itemView.findViewById(R.id.desc);
-        }
-    }
 
-    private ArrayList<ComplainModel> mComplains;
-    public DataActivityAdapter(ArrayList<ComplainModel> complains){
-        mComplains = complains;
+            rbSolved.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                }
+            });
+        }
     }
 
     @NonNull
@@ -56,16 +65,13 @@ public class DataActivityAdapter extends  RecyclerView.Adapter<DataActivityAdapt
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        ComplainModel complain = mComplains.get(position);
+        /* ComplainModel complain = mComplains.get(position);
 
         TextView textViewName = holder.name;
         textViewName.setText(complain.name);
 
         TextView textViewFathersName = holder.fatherName;
         textViewFathersName.setText(complain.fatherName);
-
-        TextView textViewStatus = holder.status;
-        textViewStatus.setText(complain.status);
 
         TextView textViewType = holder.Type;
         textViewType.setText(complain.type);
@@ -74,7 +80,7 @@ public class DataActivityAdapter extends  RecyclerView.Adapter<DataActivityAdapt
         textViewDistrict.setText(complain.district);
 
         TextView textViewDesc = holder.Description;
-        textViewDesc.setText(complain.description);
+        textViewDesc.setText(complain.description); */
     }
 
     @Override

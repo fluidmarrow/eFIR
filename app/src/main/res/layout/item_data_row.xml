@@ -8,11 +8,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:background="@color/colorAccent"
         android:layout_marginEnd="20dp"
+        android:background="@color/colorAccent"
         app:cardCornerRadius="10dp"
         app:cardElevation="50dp"
         tools:ignore="MissingConstraints">
@@ -20,63 +20,62 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:gravity="center"
+            android:orientation="vertical"
             android:padding="16dp">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/status"
-                android:textColor="#008F24"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                tools:text="Pending"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/name"
-                android:textColor="#212121"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                tools:text="Aditya Raj Srivastava"/>
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="#008F24"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="Aditya Raj Srivastava" />
+
+            <TextView
                 android:id="@+id/fName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:textColor="#212121"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                tools:text="Sanjay Srivastava"/>
+                tools:text="Sanjay Srivastava" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/district"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:textColor="#212121"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                tools:text="Bokaro"/>
+                tools:text="Bokaro" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/type"
-                android:textColor="#212121"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                tools:text="Robbery"/>
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/desc"
                 android:textColor="#212121"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                tools:text="robbery near mall"/>
+                tools:text="Robbery" />
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#212121"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="left"
+                tools:text="robbery near mall" />
+
+            <RadioButton
+                android:id="@+id/rbSolved"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Solved" />
 
         </LinearLayout>
 

@@ -34,27 +34,27 @@
         android:background="@drawable/drawable_radio_group_tab_background">
 
         <RadioButton
-            android:id="@+id/rbFinished"
-            android:layout_width="0dp"
-            android:layout_height="35dp"
-            android:layout_weight="1"
-            android:background="@drawable/drawable_units_tab_selector"
-            android:checked="true"
-            android:text="FINISHED"
-            android:gravity="center"
-            android:textColor="@color/drawable_units_tab_text_color_selector"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:button="@null"/>
-
-        <RadioButton
             android:id="@+id/rbPending"
             android:layout_width="0dp"
             android:layout_height="35dp"
             android:layout_weight="1"
             android:background="@drawable/drawable_units_tab_selector"
-            android:checked="false"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
             android:text="PENDING"
+            android:textColor="@color/drawable_units_tab_text_color_selector"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rbFinished"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="@drawable/drawable_units_tab_selector"
+            android:checked="false"
+            android:text="FINISHED"
             android:gravity="center"
             android:textColor="@color/drawable_units_tab_text_color_selector"
             android:textSize="16sp"

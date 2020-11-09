@@ -7,15 +7,15 @@ public class ComplainModel {
     String district;
     String type;
     String description;
-    String status;
+    boolean solved;
 
-    public ComplainModel(String name,String fatherName,String district,String type,String description,String status){
+    public ComplainModel(String name,String fatherName,String district,String type,String description,boolean solved){
         this.name = name;
         this.fatherName = fatherName;
         this.district = district;
         this.type = type;
         this.description = description;
-        this.status = status;
+        this.solved = solved;
     }
 
     public static void createComplainList(int i) {
@@ -56,11 +56,11 @@ public class ComplainModel {
         this.description = description;
     }
 
-    public String getStatus(){
-        return status;
+    public boolean getSolved(){
+        return solved;
     }
-    public void setStatus(String status){
-        this.status = status;
+    public void setSolved(boolean solved){
+        this.solved = solved;
     }
 
 }
