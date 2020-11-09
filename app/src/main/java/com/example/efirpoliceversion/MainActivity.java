@@ -21,9 +21,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 EditText username = (EditText) findViewById(R.id.name);
-                String user = username.getText().toString();
+                String user = username.getText().toString().trim();
                 EditText password = (EditText) findViewById(R.id.password);
-                String pass = password.getText().toString();
+                String pass = password.getText().toString().trim();
+
                 if(user.equals("username@ifir") && pass.equals("password")){
                     Intent intent = new Intent(MainActivity.this, DataActivity.class);
                     startActivity(intent);
