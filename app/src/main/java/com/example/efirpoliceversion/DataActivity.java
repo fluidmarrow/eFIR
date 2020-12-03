@@ -21,8 +21,8 @@ import java.util.Objects;
 
 public class DataActivity extends AppCompatActivity {
 
-    ArrayList<ComplainModel> solvedComplains;
-    ArrayList<ComplainModel> pendingComplains;
+    ArrayList<ComplainModel> solvedComplains = new ArrayList<ComplainModel>();
+    ArrayList<ComplainModel> pendingComplains = new ArrayList<ComplainModel>();
     RadioButton rbFinished, rbPending;
     RecyclerView rvTasks;
     RecyclerView.Adapter solvedAdapter, pendingAdapter;
@@ -55,7 +55,8 @@ public class DataActivity extends AppCompatActivity {
         rvTasks.setHasFixedSize(true);
 
         rvTasks.setLayoutManager(new LinearLayoutManager(this));
-
+        solvedComplains.add(new ComplainModel("A","B","C","D","E",true));
+        pendingComplains.add(new ComplainModel("A","B","C","D","E",false));
         solvedAdapter = new DataActivityAdapter(solvedComplains);
         pendingAdapter = new DataActivityAdapter(pendingComplains);
 

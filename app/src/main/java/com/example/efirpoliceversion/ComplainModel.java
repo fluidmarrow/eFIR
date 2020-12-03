@@ -2,12 +2,12 @@ package com.example.efirpoliceversion;
 
 public class ComplainModel {
 
-    String name;
-    String fatherName;
-    String district;
-    String type;
-    String description;
-    boolean solved;
+    String name = ".";
+    String fatherName = ".";
+    String district = ".";
+    String type = ".";
+    String description = ".";
+    boolean solved = true;
 
     public ComplainModel(String name,String fatherName,String district,String type,String description,boolean solved){
         this.name = name;

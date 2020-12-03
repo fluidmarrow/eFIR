@@ -65,7 +65,8 @@ public class DataActivityAdapter extends  RecyclerView.Adapter<DataActivityAdapt
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        /* ComplainModel complain = mComplains.get(position);
+
+        ComplainModel complain = mComplains.get(position);
 
         TextView textViewName = holder.name;
         textViewName.setText(complain.name);
@@ -80,7 +81,7 @@ public class DataActivityAdapter extends  RecyclerView.Adapter<DataActivityAdapt
         textViewDistrict.setText(complain.district);
 
         TextView textViewDesc = holder.Description;
-        textViewDesc.setText(complain.description); */
+        textViewDesc.setText(complain.description);
     }
 
     @Override
